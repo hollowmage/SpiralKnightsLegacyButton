@@ -1,0 +1,144 @@
+/* the button */
+.sk {
+	box-sizing: border-box;
+	display: inline-block;
+	position: relative;
+	
+	margin: 2px;
+	width: 176px;
+	height: 44px;
+
+	border: 2px solid transparent;
+	border-radius: 22px;
+	
+	background-color: #145;
+	background-clip: padding-box;
+	
+	color: #cef;
+	text-align: start;
+	text-decoration: none;
+	overflow: hidden;
+}
+.sk::-moz-focus-inner { border: 0; }
+
+
+/* slant */
+.sk::before {
+	content: "";
+	position: absolute;
+	box-sizing: border-box;
+	top: 0;
+	left: 0;
+	width: 0px;
+	height: 0px;
+	border-top: 41px solid #6BB;
+	border-right: 41px solid transparent;
+}
+
+/* name */
+.name {
+	position: absolute;
+	box-sizing: border-box;
+	top: 2px;
+	left: 2px;
+	vertical-align: top;
+	
+	font-family: DejaVu Sans, sans-serif;
+	font-style: italic;
+	font-weight: 900;
+	font-size: 10px;
+	letter-spacing: 0;
+	word-spacing: .28em;
+	line-height: 11px;
+}
+
+/* icon */
+.name::before {
+	content: "";
+	float: left;
+	box-sizing: border-box;
+	
+	width: 37px;
+	height: 37px;
+	margin-top: 0px;
+	margin-right: 2px;
+	
+	border: 2px solid #293239;
+	border-radius: 22px;
+	
+	background-color: #293239;
+	
+	/*
+	you'll need to set this value yourself for every button:
+		background-image: url();
+	*/
+}
+
+/* unique variants */
+.UVs {
+	position: absolute;
+	box-sizing: border-box;
+	left: 40px;
+	bottom: 2px;
+	height: 15px;
+	background-image: url('v.png');
+	background-repeat: repeat-x;
+}
+
+/* stars */
+.stars {
+	position: absolute;
+	box-sizing: border-box;
+	right: 9px;
+	bottom: 3px;
+	width: 75px;
+	height: 15px;
+	background-image: url('s0.png');
+	background-repeat: repeat-x;
+}
+.stars::before {
+	content: "";
+	position: absolute;
+	box-sizing: border-box;
+	left: 0;
+	height: 15px;
+	background-image: url('s1.png');
+	background-repeat: repeat-x;
+}
+
+/* hover */
+.sk:not(:disabled):hover { border-color: #FFF; }
+.sk:not(:disabled):hover::before { border-top-color: #FFF; }
+
+/* armed */
+.sk.armed { border-color: #FF0; background-color: #862; }
+.sk.armed::before { border-top-color: #FF0; }
+
+/* disabled */
+.sk:disabled {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+.sk:disabled::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(255, 255, 255, 0.2);
+}
+
+/* number of variants */
+.sk.v0 .UVs { width: 0; }
+.sk.v1 .UVs { width: 15px; }
+.sk.v2 .UVs { width: 30px; }
+.sk.v3 .UVs { width: 45px; }
+
+/* number of stars */
+.sk.s0 .stars::before { width: 0; }
+.sk.s1 .stars::before { width: 15px; }
+.sk.s2 .stars::before { width: 30px; }
+.sk.s3 .stars::before { width: 45px; }
+.sk.s4 .stars::before { width: 60px; }
+.sk.s5 .stars::before { width: 75px; }
