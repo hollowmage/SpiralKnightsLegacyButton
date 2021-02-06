@@ -33,6 +33,5 @@ The classes s0 to s5 correspond to the number of stars, while v0 to v3 correspon
 
 * Reduce the amount of HTML code needed to create a button (shadow DOM...?)
 * Button backgrounds (the in-game buttons weren't just colors, they had a background texture)
-
-~~* Figure out what software licenses are (since Github was asking me to choose one just a moment ago) and where my work falls under. (As far as I'm concerned you can use these buttons however you see fit while I figure this stuff out...)~~ Figured it out, I chose the MIT License, have fun!
+* ~~Figure out what software licenses are (since Github was asking me to choose one just a moment ago) and where my work falls under. (As far as I'm concerned you can use these buttons however you see fit while I figure this stuff out...)~~ Figured it out, I chose the MIT License, have fun!
 * Maybe convert all images to SVG? Would that be a good thing? I don't know...
